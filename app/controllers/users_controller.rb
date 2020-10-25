@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   layout :resolve_layout
 
   before_action :set_user, except: [:new, :index, :supportourwork, :youtubers, :create, :stripe_callback ]
-  before_action :authenticate_user!, only: [:update, :dashboard, :controlpanel ]
+  before_action :authenticate_user!, only: [:update, :dashboard, :controlpanel, :viewer ]
 
   #before_action :correct_user, only: [:dashboard, :user_id]
   #before_action :correct_user, only: [:controlpanel]
@@ -15,7 +15,8 @@ class UsersController < ApplicationController
   end
 
   def viewer
-    @users = User.where('last_viewed @> ARRAY[?]::integer[]', [params[:event]])
+    @users = User.where('last_viewed @> ARRAY[?]::integer[]', [params[:event]]) #This unhelpful array has been disabled. Should be an integer
+    @count = @users.count
     pdtnow = Time.now - 7.hours + 5.minutes
     currconvos = Event.where("start_at < ? AND end_at > ?", pdtnow, pdtnow)
     @otherconvos = []
@@ -165,20 +166,22 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @recaptcha_checked = verify_recaptcha(model: @user)
-
-    if @recaptcha_checked 
+    #@recaptcha_checked = verify_recaptcha(model: @user)
+    #if @recaptcha_checked 
       if @user.save
-      redirect_to new_user_session_path, success: "You have successfully signed up! An email has been sent for you to confirm your account."
-      UserMailer.with(user: @user).welcome_email.deliver_later
+        sign_in @user
+        redirect_to user_profileinfo_path(current_user.permalink) 
+        #email confirmation not really helpful, more of an annoyance. Seems to be broken on new heroku
+        #redirect_to new_user_session_path, success: "You have successfully signed up! An email has been sent for you to confirm your account."
+        #UserMailer.with(user: @user).welcome_email.deliver_later
       else
         redirect_to new_user_signup_path, danger: signup_error_message
         @user.errors.clear
       end
-    else 
-      redirect_to new_user_signup_path, danger: signup_error_message + "Please check the captcha box!"
-      @user.errors.clear
-    end
+    #else 
+    #  redirect_to new_user_signup_path, danger: signup_error_message + "Please check the captcha box!"
+    #  @user.errors.clear
+    #end
   end
 
   # PUT /users/1.json
@@ -229,14 +232,13 @@ class UsersController < ApplicationController
     params.require(:user).permit(:permalink, :name, :email, :password,
                                  :about, :author, :password_confirmation, :genre1, :genre2, :genre3,
                                  :twitter, :title, :profilepic, :remember_me,
-                                 :facebook, :youtube1, :youtube2,
-                                 :youtube3, :updating_password, :attendid,
-                                 :agreeid, :purchid, :bannerpic, :on_password_reset, :stripesignup )
+                                 :facebook, :updating_password, :attendid,
+                                 :purchid, :bannerpic, :on_password_reset, :stripesignup )
   end
 
   def resolve_layout
     case action_name
-    when "index", "youtubers", "supportourwork", "stripe_callback"
+    when "index", "stripe_callback"
       'application'
     when "profileinfo", "changepassword"
       'editinfotemplate'
