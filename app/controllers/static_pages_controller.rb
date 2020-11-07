@@ -165,6 +165,8 @@ class StaticPagesController < ApplicationController
   end
   def vieweronhost
   end
+  def embed
+  end
 
   def tellfriends
     #The current content on this page should be integrated into some page that helps hosts set up shows
