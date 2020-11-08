@@ -169,13 +169,18 @@ class UsersController < ApplicationController
 
     if @recaptcha_checked 
       if @user.save
-      redirect_to new_user_session_path, success: "You have successfully signed up! An email has been sent for you to confirm your account."
-      UserMailer.with(user: @user).welcome_email.deliver_later
+        redirect_to new_user_session_path, success: "You have successfully signed up! An email has been sent for you to confirm your account."
+        UserMailer.with(user: @user).welcome_email.deliver_later
+        unless cookies[:referer_id].nil? then
+          ref_user = User.find(cookies[:referer_id])
+          User.update(ref_user.id, reputation_score: ref_user.reputation_score + 10)
+          cookies.delete :referer_id
+        end
       else
         redirect_to new_user_signup_path, danger: signup_error_message
         @user.errors.clear
       end
-    else 
+    else
       redirect_to new_user_signup_path, danger: signup_error_message + "Please check the captcha box!"
       @user.errors.clear
     end

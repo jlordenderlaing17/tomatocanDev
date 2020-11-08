@@ -6349,3 +6349,1183 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-07 07:33:47 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 04:33:47.151341' AND topic = 'Conversation')[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:33:47.403904' AND start_at > '2020-11-07 06:33:47.403920' AND topic = 'Conversation') ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:33:47.403904' AND topic = 'Conversation') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:33:47.403904' AND start_at > '2020-11-07 06:33:47.403920' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:33:47.403904' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:33:47.403904' AND start_at > '2020-11-07 06:33:47.403920' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:33:47.403904' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/homepg
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-07 04:33:47.151341' AND topic = 'Conversation')[0m
+  Rendered layouts/_countdown_clock.html.erb (Duration: 1.7ms | Allocations: 471)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-07 04:33:47.151341' AND topic = 'Conversation')[0m
+  Rendered layouts/_convocalendar.html.erb (Duration: 4.8ms | Allocations: 3589)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 1.4ms | Allocations: 1493)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layouts/_weeklycalendar.html.erb (Duration: 10.3ms | Allocations: 2593)
+  Rendered layouts/_calendar.html.erb (Duration: 1.6ms | Allocations: 1041)
+  Rendered static_pages/home.html.erb within layouts/homepg (Duration: 29.8ms | Allocations: 9156)
+  Rendered application/_favicon.html.erb (Duration: 0.4ms | Allocations: 329)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 483)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 649)
+Completed 200 OK in 344ms (Views: 47.8ms | ActiveRecord: 15.6ms | Allocations: 25948)
+
+
+Started GET "/embed" for ::1 at 2020-11-07 07:36:35 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 0.3ms | Allocations: 114)
+  Rendered application/_favicon.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 220)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 2410)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-07 07:36:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-07 07:36:38 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 04:36:38.958662' AND topic = 'Conversation')[0m
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:36:38.961740' AND start_at > '2020-11-07 06:36:38.961754' AND topic = 'Conversation') ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:36:38.961740' AND topic = 'Conversation') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:36:38.961740' AND start_at > '2020-11-07 06:36:38.961754' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:36:38.961740' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:36:38.961740' AND start_at > '2020-11-07 06:36:38.961754' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:36:38.961740' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/homepg
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-07 04:36:38.958662' AND topic = 'Conversation')[0m
+  Rendered layouts/_countdown_clock.html.erb (Duration: 1.2ms | Allocations: 123)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-07 04:36:38.958662' AND topic = 'Conversation')[0m
+  Rendered layouts/_convocalendar.html.erb (Duration: 4.2ms | Allocations: 119)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_weeklycalendar.html.erb (Duration: 10.5ms | Allocations: 702)
+  Rendered layouts/_calendar.html.erb (Duration: 1.7ms | Allocations: 367)
+  Rendered static_pages/home.html.erb within layouts/homepg (Duration: 20.3ms | Allocations: 1635)
+  Rendered application/_favicon.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 139)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 220)
+Completed 200 OK in 42ms (Views: 24.7ms | ActiveRecord: 3.6ms | Allocations: 5266)
+
+
+Started GET "/embed" for ::1 at 2020-11-07 07:50:10 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+  Rendered application/_favicon.html.erb (Duration: 0.3ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 191)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 220)
+Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 1577)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-07 07:50:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-07 07:50:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-07 07:57:03 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 04:57:03.708627' AND topic = 'Conversation')[0m
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:57:03.757361' AND start_at > '2020-11-07 06:57:03.757374' AND topic = 'Conversation') ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:57:03.757361' AND topic = 'Conversation') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:57:03.757361' AND start_at > '2020-11-07 06:57:03.757374' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:57:03.757361' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-07 07:57:03.757361' AND start_at > '2020-11-07 06:57:03.757374' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-07 07:57:03.757361' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/homepg
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-07 04:57:03.708627' AND topic = 'Conversation')[0m
+  Rendered layouts/_countdown_clock.html.erb (Duration: 0.9ms | Allocations: 144)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-07 04:57:03.708627' AND topic = 'Conversation')[0m
+  Rendered layouts/_convocalendar.html.erb (Duration: 0.8ms | Allocations: 119)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_weeklycalendar.html.erb (Duration: 13.8ms | Allocations: 701)
+  Rendered layouts/_calendar.html.erb (Duration: 1.2ms | Allocations: 366)
+  Rendered static_pages/home.html.erb within layouts/homepg (Duration: 20.6ms | Allocations: 1653)
+  Rendered application/_favicon.html.erb (Duration: 0.8ms | Allocations: 113)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 220)
+Completed 200 OK in 89ms (Views: 24.9ms | ActiveRecord: 8.9ms | Allocations: 7365)
+
+
+Started GET "/embed" for ::1 at 2020-11-07 07:57:43 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  Rendered application/_favicon.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 191)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 220)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 1573)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-07 07:57:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-08 15:27:50 -0700
+Processing by StaticPagesController#home as HTML
+  [1m[36mEvent Load (2.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-08 12:27:50.851815' AND topic = 'Conversation')[0m
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-08 15:27:51.502422' AND start_at > '2020-11-08 14:27:51.502457' AND topic = 'Conversation') ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-08 15:27:51.502422' AND topic = 'Conversation') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-08 15:27:51.502422' AND start_at > '2020-11-08 14:27:51.502457' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-08 15:27:51.502422' AND topic = 'DropIn') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at < '2020-11-08 15:27:51.502422' AND start_at > '2020-11-08 14:27:51.502457' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE (start_at > '2020-11-08 15:27:51.502422' AND topic = 'Group Problem Solving') ORDER BY start_at ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/homepg
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-08 12:27:50.851815' AND topic = 'Conversation')[0m
+  Rendered layouts/_countdown_clock.html.erb (Duration: 5.0ms | Allocations: 471)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "events" WHERE (start_at > '2020-11-08 12:27:50.851815' AND topic = 'Conversation')[0m
+  Rendered layouts/_convocalendar.html.erb (Duration: 11.6ms | Allocations: 3589)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 4.0ms | Allocations: 1493)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_renderdayhome.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layouts/_weeklycalendar.html.erb (Duration: 13.2ms | Allocations: 2592)
+  Rendered layouts/_calendar.html.erb (Duration: 4.4ms | Allocations: 1041)
+  Rendered static_pages/home.html.erb within layouts/homepg (Duration: 59.4ms | Allocations: 9156)
+  Rendered application/_favicon.html.erb (Duration: 3.4ms | Allocations: 329)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 483)
+  Rendered layouts/_footer.html.erb (Duration: 2.0ms | Allocations: 649)
+Completed 200 OK in 855ms (Views: 110.6ms | ActiveRecord: 37.9ms | Allocations: 25956)
+
+
+Started GET "/%3Cimg%20width=%22100%%22%20src=%22/assets/starIcon-30742baeb0b3c59e8d69dfc1df346a2b6c1382398e66dc79e23e460939076246.png%22%20/%3E" for ::1 at 2020-11-08 15:27:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/%3Cimg%20width=%22100%%22%20src=%22/assets/starIcon-30742baeb0b3c59e8d69dfc1df346a2b6c1382398e66dc79e23e460939076246.png%22%20/%3E"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 15:27:56 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.7ms | Allocations: 126)
+  Rendered application/_favicon.html.erb (Duration: 0.7ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 197)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 220)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 2429)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:27:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 15:31:53 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.3ms | Allocations: 127)
+  Rendered application/_favicon.html.erb (Duration: 1.9ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 4.1ms | Allocations: 618)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 3911)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:31:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 15:33:10 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 0.9ms | Allocations: 127)
+  Rendered application/_favicon.html.erb (Duration: 2.0ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.8ms | Allocations: 618)
+Completed 200 OK in 23ms (Views: 19.9ms | Allocations: 3911)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:33:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 15:33:32 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+  Rendered application/_favicon.html.erb (Duration: 1.1ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 1.8ms | Allocations: 618)
+Completed 200 OK in 14ms (Views: 12.6ms | Allocations: 3905)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:33:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:34:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 15:34:47 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.0ms | Allocations: 126)
+  Rendered application/_favicon.html.erb (Duration: 2.4ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 618)
+Completed 200 OK in 25ms (Views: 21.6ms | Allocations: 3905)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:34:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 15:56:22 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.8ms | Allocations: 137)
+  Rendered application/_favicon.html.erb (Duration: 2.3ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.9ms | Allocations: 618)
+Completed 200 OK in 29ms (Views: 25.8ms | Allocations: 3916)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:56:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:56:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 15:57:13 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.3ms | Allocations: 140)
+  Rendered application/_favicon.html.erb (Duration: 2.0ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 618)
+Completed 200 OK in 24ms (Views: 20.8ms | Allocations: 3929)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 15:57:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:01:04 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.1ms | Allocations: 137)
+  Rendered application/_favicon.html.erb (Duration: 1.5ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.3ms | Allocations: 618)
+Completed 200 OK in 24ms (Views: 20.3ms | Allocations: 3916)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:01:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:02:55 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.0ms | Allocations: 136)
+  Rendered application/_favicon.html.erb (Duration: 1.5ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 618)
+Completed 200 OK in 34ms (Views: 31.3ms | Allocations: 3915)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:02:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:04:29 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.6ms | Allocations: 136)
+  Rendered application/_favicon.html.erb (Duration: 1.7ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.5ms | Allocations: 618)
+Completed 200 OK in 25ms (Views: 22.3ms | Allocations: 3915)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:04:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:11:19 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+  Rendered application/_favicon.html.erb (Duration: 1.1ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 220)
+Completed 200 OK in 12ms (Views: 9.7ms | Allocations: 1592)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:11:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:11:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:11:25 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.5ms | Allocations: 142)
+  Rendered application/_favicon.html.erb (Duration: 1.8ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.9ms | Allocations: 618)
+Completed 200 OK in 29ms (Views: 25.1ms | Allocations: 3931)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:11:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:23:36 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.2ms | Allocations: 137)
+  Rendered application/_favicon.html.erb (Duration: 1.6ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 4.4ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 618)
+Completed 200 OK in 27ms (Views: 23.4ms | Allocations: 3918)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:23:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:23:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:31:31 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.6ms | Allocations: 137)
+  Rendered application/_favicon.html.erb (Duration: 1.8ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.3ms | Allocations: 618)
+Completed 200 OK in 27ms (Views: 23.1ms | Allocations: 3916)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:31:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:32:24 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.3ms | Allocations: 137)
+  Rendered application/_favicon.html.erb (Duration: 1.7ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.5ms | Allocations: 618)
+Completed 200 OK in 25ms (Views: 21.5ms | Allocations: 3916)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:32:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:33:13 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.1ms | Allocations: 137)
+  Rendered application/_favicon.html.erb (Duration: 2.1ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 618)
+Completed 200 OK in 24ms (Views: 20.9ms | Allocations: 3916)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:33:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:34:24 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.0ms | Allocations: 137)
+  Rendered application/_favicon.html.erb (Duration: 1.5ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 618)
+Completed 200 OK in 23ms (Views: 20.4ms | Allocations: 3916)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:34:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:35:22 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.2ms | Allocations: 136)
+  Rendered application/_favicon.html.erb (Duration: 2.2ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.7ms | Allocations: 618)
+Completed 200 OK in 28ms (Views: 24.5ms | Allocations: 3915)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:35:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/embed" for ::1 at 2020-11-08 16:36:26 -0700
+Processing by StaticPagesController#embed as HTML
+  Rendering static_pages/embed.html.erb within layouts/application
+  Rendered static_pages/embed.html.erb within layouts/application (Duration: 1.1ms | Allocations: 141)
+  Rendered application/_favicon.html.erb (Duration: 1.5ms | Allocations: 301)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 509)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 618)
+Completed 200 OK in 26ms (Views: 23.1ms | Allocations: 3929)
+
+
+Started GET "/ThinQ_FAQ_files/all.css" for ::1 at 2020-11-08 16:36:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/ThinQ_FAQ_files/all.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `public_send'
+railties (6.0.3.2) lib/rails/railtie.rb:190:in `method_missing'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
