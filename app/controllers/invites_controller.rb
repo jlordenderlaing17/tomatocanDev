@@ -1,5 +1,5 @@
-class InvitationsController < ApplicationController
-  def invite
+class InvitesController < ApplicationController
+  def invite_received
     # create cookie
     cookies[:referer_id] = {
         value: params[:referer_id],

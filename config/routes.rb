@@ -33,8 +33,8 @@ Rails.application.routes.draw do
   match 'studyhall',                to: 'static_pages#studyhall',           via: 'get'
   match 'blocked',                  to: 'static_pages#blocked',             via: 'get'
   match 'privacy',                  to: 'static_pages#privacy_policy',      via: 'get'
-  match 'embed',                    to: 'static_pages#embed',               via: 'get'
-  get '/invite/:referer_id',        to: 'invitations#invite'
+  match 'embed_tutorial',           to: 'static_pages#embed_tutorial',               via: 'get'
+  get '/invite/:referer_id',        to: 'invites#invite_received'
   match '/merchandises/standardperks' => 'merchandises#standardperks',      :as => :standardperks,  via: 'get'
   match '/merchandises/new' => 'merchandises#new',                          :as => :createperk,       via: 'get'
 
